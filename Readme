@@ -1,0 +1,14 @@
+Create a network -
+docker network create network_name
+
+To build the backend image-
+docker build -t backendimagename
+docker run -p 3001:3001 --network network_name backendimagename
+
+
+
+To run the mongo image in the same network -
+
+docker volume create mongo_volume_name
+
+docker run -p 27017:27107 --network=monognetwork --name mongo -v  mongo_volume_name  mongo  
