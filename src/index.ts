@@ -2,7 +2,7 @@ import express, { Express, Request, Response } from 'express';
 import { User } from './db';
 
 const app: Express = express();
-const port: number = 3000;
+const port: number = 3001;
 
 app.use(express.json());
 
