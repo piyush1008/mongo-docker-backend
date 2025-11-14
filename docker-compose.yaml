@@ -13,6 +13,9 @@ services:
    container_name: mongobackend
    ports:
     - '3001:3001'
+   volumes:
+    - ./src:/app
+    - /app/node_modules
    depends_on:
     - mongodb
 
