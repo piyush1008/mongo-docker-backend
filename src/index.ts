@@ -23,6 +23,7 @@ app.post('/user', async (req: Request, res: Response) => {
 app.get('/users', async (req: Request, res: Response) => {
   try {
     const users = await User.find();
+    console.log("heelo there")
     res.status(200).send(users);
   } catch (err) {
     res.status(500).send({ message: 'Error fetching users', error: err });
@@ -31,5 +32,5 @@ app.get('/users', async (req: Request, res: Response) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running on in at http://localhost:${port}`);
 });
